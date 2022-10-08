@@ -1,0 +1,1 @@
+<script src="{{Vite::asset('resources/dist_front/js/custom.js')}}"></script> 

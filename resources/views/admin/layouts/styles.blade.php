@@ -1,0 +1,16 @@
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/bootstrap.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/font_awesome_5_free.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/select2.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/bootstrap-datepicker.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/bootstrap-timepicker.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/bootstrap-tagsinput.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/duotone-dark.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/dataTables.bootstrap4.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/iziToast.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/fontawesome-iconpicker.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/bootstrap4-toggle.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/summernote-bs4.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/style.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/components.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/spacing.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/custom.css')}} ">
