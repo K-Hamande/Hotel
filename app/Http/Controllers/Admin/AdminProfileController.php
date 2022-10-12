@@ -17,7 +17,7 @@ class AdminProfileController extends Controller
         return view('admin.profile',compact('Profil'));
     }
 
-    public function Edit_Profile_Submit(Request $request )
+    public function Edit_Profile_Submit(Request $request)
 
     {
         $Data = Admin::where('email',Auth::guard('admin')->user()->email)->first();

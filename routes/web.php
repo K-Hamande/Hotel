@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminFormController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminSlideController;
@@ -18,21 +19,49 @@ Route::get('/About',[AboutController::class,'Index'])->name('About');
 /*  Admin */ 
 
     Route::middleware(['admin:admin'])->group( function() {
-        
+
+
+    Route::get('/admim/Admin_Form',[AdminFormController::class,'Index'])->name('Admin_Form');
+
     Route::get('/admin/home',[AdminController::class,'Index'])->name('admin_home');
+
+
+                               // Admin Profile Route
 
     Route::get('/admin/Edit_Profile',[AdminProfileController::class,'Index'])->name('Edit_Profile');
 
     Route::post('/admin/Edit_Profile_submit/',[AdminProfileController::class,'Edit_Profile_Submit'])->name('Edit_Profile_Submit');
+
+
+                                // Admin Slide Route
 
     Route::get('/admin/Admin_Slide',[AdminSlideController::class,'Index'])->name('Admin_Slide');
 
     Route::get('/admin/Admin_Slide_Add',[AdminSlideController::class,'Add'])->name('Admin_Slide_Add');
 
     Route::post('/admin/Admin_Slide_Store',[AdminSlideController::class,'Store'])->name('Admin_Slide_Store');
-   
-    Route::get('/admim/Admin_Form',[AdminFormController::class,'Index'])->name('Admin_Form');
 
+    Route::post('/admin/Admin_Slide_Submit/{id}',[AdminSlideController::class,'Admin_Slide_Submit'])->name('Admin_Slide_Submit');
+
+    Route::get('/admin/Admin_Slide_Edit/{id}',[AdminSlideController::class,'Admin_Slide_Edit'])->name('Admin_Slide_Edit');
+
+    Route::get('/admin/Admin_Slide_Delete/{id}',[AdminSlideController::class,'Admin_Slide_Delete'])->name('Admin_Slide_Delete');
+
+
+                                    // Admin Feature Route
+
+    Route::get('/admin/Admin_Feature',[AdminFeatureController::class,'Index'])->name('Admin_Feature');
+
+    Route::get('/admin/Admin_Feature_Add',[AdminFeatureController::class,'Admin_Feature_Add'])->name('Admin_Feature_Add');
+
+    Route::post('/admin/Admin_Feature_Store',[AdminFeatureController::class,'Store'])->name('Admin_Feature_Store');
+
+    Route::post('/admin/Admin_Feature_Update/{id}',[AdminFeatureController::class,'Admin_Feature_Update'])->name('Admin_Feature_Update');
+
+    Route::get('/admin/Admin_Feature_Edit/{id}',[AdminFeatureController::class,'Admin_Feature_Edit'])->name('Admin_Feature_Edit');
+
+    Route::get('/admin/Admin_Feature_Delete/{id}',[AdminFeatureController::class,'Admin_Feature_Delete'])->name('Admin_Feature_Delete');
+   
 });
 
 

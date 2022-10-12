@@ -3,13 +3,13 @@
 @section('heading','Nouveau Slide')
 
 @section('Button')
-        <a href="{{Route('Admin_Slide')}}" class="btn btn-primary"><i class="fas fa-plus"></i> Tous Les Slides </a>
+        <a href="{{Route('Admin_Slide')}}" class="btn btn-primary"><i class="fas fa-eye"></i> Tous Les Slides </a>
 @endsection
 
 @section('main_content')
 
-<div class="section-body">
-    <div class="row">
+<div class="section-body ">
+    <div class="row ">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
@@ -18,32 +18,26 @@
                         <div class="row">
                             <div class="col-md-9">
                                 <div class="mb-4">
-                                    <label class="form-label">Photo <span class="alert text-danger">*</span></label>
-                                    <input type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" value="">
-                                    @error('photo')
-                                        <div class="alert text-alert"> {{$message}} </div>
-                                    @enderror
+                                    <label class="form-label">Photo <span class="alert text-danger">*</span> </label>
+                                    <input type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" value="">  
                                 </div>
                                 <div class="mb-4">
-                                    <label class="form-label">Text <span class="alert text-danger">*</span></label>
+                                    <label class="form-label">Titre</label>
+                                    <input type="text" class="form-control @error('heading') is-invalid @enderror" name="heading" value="">
+                                    
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Description </label>
                                     <input type="text" class="form-control @error('text') is-invalid @enderror" name="text" value="{{old('text')}}">
-                                    @error('text')
-                                        <div class="alert text-alert"> {{$message}} </div>
-                                    @enderror
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Button Text </label>
-                                    <input type="text" class="form-control @error('button_text') is-invalid @enderror" name="text" value="{{old('button_text')}}">
-                                    @error('button_text')
-                                        <div class="alert text-alert"> {{$message}} </div>
-                                    @enderror
+                                    <input type="text" class="form-control @error('button_text') is-invalid @enderror" name="button_text" value="{{old('button_text')}}">
+                                    
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Button URL </label>
-                                    <input type="text" class="form-control @error('button_url') is-invalid @enderror" name="text" value="{{old('button_url')}}">
-                                    @error('button_url')
-                                        <div class="alert text-alert"> {{$message}} </div>
-                                    @enderror
+                                    <input type="text" class="form-control @error('button_url') is-invalid @enderror" name="button_url" value="{{old('button_url')}}">
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label"></label>

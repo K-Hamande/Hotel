@@ -1,5 +1,5 @@
     <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/bootstrap.min.css')}} ">
-    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/font_awesome_5_free.min.css')}} ">
+    <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/all.css')}} ">
     <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/select2.min.css')}} ">
     <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/bootstrap-datepicker.min.css')}} ">
     <link rel="stylesheet" href="{{Vite::asset('resources/dist/css/bootstrap-timepicker.min.css')}} ">

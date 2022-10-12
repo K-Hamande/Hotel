@@ -2,6 +2,19 @@
 
 @section('heading','A Propos')
 
+
+@section('PageTop')    
+<div class="page-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>@yield('heading')</h2>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
 @section('page-content')
 
 <div class="page-content">

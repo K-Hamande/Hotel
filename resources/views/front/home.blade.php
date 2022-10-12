@@ -4,31 +4,39 @@
 
 <div class="slider">
     <div class="slide-carousel owl-carousel">
-        <div class="item" style="background-image:url({{Vite::asset('resources/uploads/slide1.jpg')}} );">
-            <div class="bg"></div>
+
+@foreach ($Slide_Display as $Values)
+        
+        <div class="item" style="background-image:url({{Vite::asset('resources/uploads/Slide/'.$Values->photo)}})">
             <div class="text">
-                <h2>Le Meilleur Hôtel De La ville</h2>
+                @if (isset($Values->heading))
+                    <h2>{{$Values->heading}}</h2>
+                @else
+                    
+                @endif
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate, veritatis esse dolorem soluta.
+                    @if (isset($Values->text))
+                        {{$Values->text}}
+                    @endif
                 </p>
-                <div class="button">
-                    <a href="">Voir</a>
-                </div>
+                
+                        @if (isset($Values->button_text))
+                    <div class="button">
+                            <a href="">
+                         {{$Values->button_text}}
+                        </a>
+                    </div>
+                        @else
+                        @endif
+                       
+                
             </div>
         </div>
-        <div class="item" style="background-image:url({{Vite::asset('resources/uploads/slide2.jpg')}} );">
-            <div class="bg"></div>
-            <div class="text">
-                <h2>Des Chambres De Qualité Pour Les Invités</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate, veritatis esse dolorem soluta.
-                </p>
-                <div class="button">
-                    <a href="">Voir</a>
-                </div>
-            </div>
-        </div>
+   
+        @endforeach
     </div>
+</div>
+
 </div>
      
  
@@ -73,99 +81,24 @@
     </div>
 </div>
 
-
-
 <div class="home-feature">
     <div class="container">
         <div class="row">
+            @foreach ($Feature_Display as $Values)
+
             <div class="col-md-3">
                 <div class="inner">
-                    <div class="icon"><i class="fa fa-clock-o"></i></div>
+                    <div class="icon"><i class="{{$Values->icons}}"></i></div>
                     <div class="text">
-                        <h2>24 hour Room service</h2>
+                        <h2>  {{$Values->heading}}</h2>
                         <p>
-                            If you find a lower online rate, we will match it and give you an additional 25% off on your stay.
+                             {{$Values->text}}
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="inner">
-                    <div class="icon"><i class="fa fa-wifi"></i></div>
-                    <div class="text">
-                        <h2>Wifi Gratuit</h2>
-                        <p>
-                            If you find a lower online rate, we will match it and give you an additional 25% off on your stay.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="inner">
-                    <div class="icon"><i class="fa fa-superpowers"></i></div>
-                    <div class="text">
-                        <h2>Enjoy Free Nights</h2>
-                        <p>
-                            If you find a lower online rate, we will match it and give you an additional 25% off on your stay.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="inner">
-                    <div class="icon"><i class="fa fa-money"></i></div>
-                    <div class="text">
-                        <h2>Save up to 40%</h2>
-                        <p>
-                            Members get access to an exclusive discounts on Radissonblu.com. Not a member yet? Hurry Up!
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="inner">
-                    <div class="icon"><i class="fa fa-coffee"></i></div>
-                    <div class="text">
-                        <h2>Complimentary Breakfast</h2>
-                        <p>
-                            If you find a lower online rate, we will match it and give you an additional 25% off on your stay.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="inner">
-                    <div class="icon"><i class="fa fa-crosshairs"></i></div>
-                    <div class="text">
-                        <h2>Swimming Pool</h2>
-                        <p>
-                            If you find a lower online rate, we will match it and give you an additional 25% off on your stay.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="inner">
-                    <div class="icon"><i class="fa fa-cubes"></i></div>
-                    <div class="text">
-                        <h2>Gym and Fitness</h2>
-                        <p>
-                            If you find a lower online rate, we will match it and give you an additional 25% off on your stay.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="inner">
-                    <div class="icon"><i class="fa fa-cutlery"></i></div>
-                    <div class="text">
-                        <h2>Top Class Restaurant</h2>
-                        <p>
-                            Members get access to an exclusive discounts on Radissonblu.com. Not a member yet? Hurry Up!
-                        </p>
-                    </div>
-                </div>
-            </div>
+                
+            @endforeach
         </div>
     </div>
 </div>

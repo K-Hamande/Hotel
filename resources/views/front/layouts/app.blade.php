@@ -35,17 +35,7 @@
         @include('front.layouts.navbar')
 
 
-        <div class="page-top">
-            <div class="bg"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>@yield('heading')</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        @yield('PageTop')
 
         @yield('page-content')
 
