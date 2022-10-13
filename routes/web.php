@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminFormController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminSlideController;
+use App\Http\Controllers\Admin\AdminTestimonialController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\HomeController;
@@ -48,7 +49,7 @@ Route::get('/About',[AboutController::class,'Index'])->name('About');
     Route::get('/admin/Admin_Slide_Delete/{id}',[AdminSlideController::class,'Admin_Slide_Delete'])->name('Admin_Slide_Delete');
 
 
-                                    // Admin Feature Route
+                                    // Admin Feature (Caracteristiques) Route
 
     Route::get('/admin/Admin_Feature',[AdminFeatureController::class,'Index'])->name('Admin_Feature');
 
@@ -61,6 +62,21 @@ Route::get('/About',[AboutController::class,'Index'])->name('About');
     Route::get('/admin/Admin_Feature_Edit/{id}',[AdminFeatureController::class,'Admin_Feature_Edit'])->name('Admin_Feature_Edit');
 
     Route::get('/admin/Admin_Feature_Delete/{id}',[AdminFeatureController::class,'Admin_Feature_Delete'])->name('Admin_Feature_Delete');
+   
+
+                                    // Admin Testimonial (Temoignage) Route
+
+    Route::get('/admin/Admin_Testimonial',[AdminTestimonialController::class,'Index'])->name('Admin_Testimonial');
+
+    Route::get('/admin/Admin_Testimonial_Add',[AdminTestimonialController::class,'Admin_Testimonial_Add'])->name('Admin_Testimonial_Add');
+
+    Route::post('/admin/Admin_Testimonial_Store',[AdminTestimonialController::class,'Store'])->name('Admin_Testimonial_Store');
+
+    Route::post('/admin/Admin_Testimonial_Update/{id}',[AdminTestimonialController::class,'Admin_Testimonial_Update'])->name('Admin_Testimonial_Update');
+
+    Route::get('/admin/Admin_Testimonial_Edit/{id}',[AdminTestimonialController::class,'Admin_Testimonial_Edit'])->name('Admin_Testimonial_Edit');
+
+    Route::get('/admin/Admin_Testimonial_Delete/{id}',[AdminTestimonialController::class,'Admin_Testimonial_Delete'])->name('Admin_Testimonial_Delete');
    
 });
 

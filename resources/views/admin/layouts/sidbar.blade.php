@@ -24,6 +24,8 @@
 
             <li class=""><a class="nav-link" href="{{Route('Admin_Feature')}} "><i class="fas fa-hand-point-right"></i> <span>Feature</span></a></li>
 
+            <li class=""><a class="nav-link" href="{{Route('Admin_Testimonial')}} "><i class="fas fa-hand-point-right"></i> <span>Testimonial</span></a></li>
+
         </ul>
     </aside>
 </div>

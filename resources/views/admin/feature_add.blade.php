@@ -30,7 +30,7 @@
 
                                 <div class="mb-4">
                                     <label class="form-label">Description </label>
-                                    <textarea class="form-control @error('text') is-invalid @enderror" name="description" value="{{old('description')}}">
+                                    <textarea class="form-control h_100 @error('text') is-invalid @enderror" name="description" value="{{old('description')}}">
 
                                     </textarea>
                                 </div>
