@@ -12,9 +12,6 @@
                 <div class="card-body">
             
     </div>
-@if(session()->get('error'))
-    <div class="alert alert-danger">{{session()->get('error')}}</div>
-@endif
                     <form action="{{Route('Edit_Profile_Submit')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">

@@ -61,7 +61,7 @@ class AdminSlideController extends Controller
             $Slide_Data->button_text = $request->button_text;
             $Slide_Data->button_url = $request->button_url;
             $Slide_Data->update();
-            return redirect()->back()->with('success','modification effectuée avec sucess');
+            return redirect()->back()->with('success','modification effectuée avec success');
 
 
     }
@@ -70,6 +70,6 @@ class AdminSlideController extends Controller
         $Slide_Data = Slide::Where('id',$id)->first();
         unlink(resource_path('uploads/Slide/').$Slide_Data->photo);
         $Slide_Data->delete();
-        return redirect()->Route('Admin_Slide')->with('success','modification effectuée avec sucess');
+        return redirect()->Route('Admin_Slide')->with('success','Suppression effectuée avec sucess');
     }
 }

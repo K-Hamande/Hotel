@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminFormController;
+use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminSlideController;
 use App\Http\Controllers\Admin\AdminTestimonialController;
@@ -14,7 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 /*  Front */ 
 Route::get('/',[HomeController::class,'Index'])->name('Home');
+
 Route::get('/About',[AboutController::class,'Index'])->name('About');
+
+Route::get('/Blog_Home',[AdminPostController::class,'Blog_Home'])->name('Blog_Home');
+
+Route::get('/Post/{id}',[AdminPostController::class,'Post'])->name('Post');
 
 
 /*  Admin */ 
@@ -32,6 +38,8 @@ Route::get('/About',[AboutController::class,'Index'])->name('About');
     Route::get('/admin/Edit_Profile',[AdminProfileController::class,'Index'])->name('Edit_Profile');
 
     Route::post('/admin/Edit_Profile_submit/',[AdminProfileController::class,'Edit_Profile_Submit'])->name('Edit_Profile_Submit');
+
+    Route::get('/admin/logout',[LoginController::class,'Logout'])->name('admin_logout');
 
 
                                 // Admin Slide Route
@@ -77,16 +85,35 @@ Route::get('/About',[AboutController::class,'Index'])->name('About');
     Route::get('/admin/Admin_Testimonial_Edit/{id}',[AdminTestimonialController::class,'Admin_Testimonial_Edit'])->name('Admin_Testimonial_Edit');
 
     Route::get('/admin/Admin_Testimonial_Delete/{id}',[AdminTestimonialController::class,'Admin_Testimonial_Delete'])->name('Admin_Testimonial_Delete');
+
+
+
+                                    // Admin Post (Blog) Route
+
+    Route::get('/admin/Admin_Post',[AdminPostController::class,'Index'])->name('Admin_Post');
+
+    Route::get('/admin/Admin_Post_Add',[AdminPostController::class,'Admin_Post_Add'])->name('Admin_Post_Add');
+
+    Route::post('/admin/Admin_Post_Store',[AdminPostController::class,'Store'])->name('Admin_Post_Store');
+
+    Route::post('/admin/Admin_Post_Update/{id}',[AdminPostController::class,'Admin_Post_Update'])->name('Admin_Post_Update');
+
+    Route::get('/admin/Admin_Post_Edit/{id}',[AdminPostController::class,'Admin_Post_Edit'])->name('Admin_Post_Edit');
+
+    Route::get('/admin/Admin_Post_Delete/{id}',[AdminPostController::class,'Admin_Post_Delete'])->name('Admin_Post_Delete');
    
 });
 
 
 
 Route::get('/admin/login',[LoginController::class,'Login'])->name('admin_login');
+
 Route::get('/admin/forget_password',[LoginController::class,'Forget_Password'])->name('admin_forget_password');
+
 Route::post('/admin/login_submit',[LoginController::class,'Login_Submit'])->name('admin_login_submit');
-Route::get('/admin/logout',[LoginController::class,'Logout'])->name('admin_logout');
+
 Route::post('/admin/password_submit',[LoginController::class,'Password_Submit'])->name('password_submit');
+
 
 
 

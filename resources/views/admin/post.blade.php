@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
 
-@section('heading','Caracteristique ')
+@section('heading','Post ')
 
 @section('main_content')
 
 @section('Button')
-        <a href=" {{Route('Admin_Feature_Add')}} " class="btn btn-primary"><i class="fas fa-plus"></i> Nouveau </a>
+        <a href=" {{Route('Admin_Post_Add')}} " class="btn btn-primary"><i class="fas fa-plus"></i> Nouveau </a>
 @endsection
 
 <section class="section">
@@ -20,28 +20,28 @@
                                 <thead>
                                 <tr>
                                     <th>Numéro</th>
-                                    <th>Icons</th>
+                                    <th>Photo</th>
                                     <th>Titre</th>
-                                    <th>Description</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                               @foreach ($Feature_Display as $Values)
+                               @foreach ($Post_Display as $Values)
+
                                <tr>
                                 <td> {{$loop->iteration}} </td>
-                                <td> 
-                                    <i class="{{ $Values->icons}}"></i>
-                                </td>
                                 <td>
-                                    {{ $Values->heading}}
+                                    <img src="{{Vite::asset('resources/uploads/Post/').$Values->photo}}" alt="" width="96">
                                 </td>
+
                                 <td>
-                                    {{  Str::limit($Values->text,30)}}
+                                    {{$Values->titre}}
                                 </td>
+
+                                
                                 <td class="pt_10 pb_10">
-                                    <a href=" {{Route('Admin_Feature_Edit',['id'=>$Values->id])}}" class="btn btn-primary " >Editer</a>
-                                    <a href="{{Route('Admin_Feature_Delete',['id'=>$Values->id])}}" class="btn btn-danger" onClick="return confirm('Voulez vous Supprimer ?');">Supprimer</a>
+                                    <a href=" {{Route('Admin_Post_Edit',['id'=>$Values->id])}}" class="btn btn-primary " >Editer</a>
+                                    <a href="{{Route('Admin_Post_Delete',['id'=>$Values->id])}}" class="btn btn-danger" onClick="return confirm('Voulez vous Supprimer ?');">Supprimer</a>
                                 </td>
                             </tr>
                                    

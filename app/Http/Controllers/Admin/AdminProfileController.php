@@ -58,7 +58,7 @@ class AdminProfileController extends Controller
             $Data->Nom = $request->name;
             $Data->email = $request->email;
             $Data->update();
-            return redirect()->back()->with('success','Mise a jour effectuée avec sucess !');
+            return redirect()->back()->with('success','Mise a jour effectuée avec success !');
        
        
     }

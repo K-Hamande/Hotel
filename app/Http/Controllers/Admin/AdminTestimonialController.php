@@ -38,7 +38,7 @@ class AdminTestimonialController extends Controller
             $Testimonial->designation = $request->designation ;
             $Testimonial->commentaire = $request->commentaire;
             $Testimonial->save();
-        return redirect()->back()->with('Success','Enregistrement Effectuée avec sucess');
+        return redirect()->back()->with('success','Enregistrement Effectuée avec sucess');
     }
 
     public function Admin_Testimonial_Edit($id)
@@ -66,7 +66,7 @@ class AdminTestimonialController extends Controller
             $Update_Testimonial->designation = $request->designation ;
             $Update_Testimonial->commentaire = $request->commentaire;
             $Update_Testimonial->Update();
-            return redirect()->back()->with(['Success','Mise a jour effecuée avec success']);
+            return redirect()->back()->with('success','Mise a jour effecuée avec success');
     }
 
     public function Admin_Testimonial_Delete($id)
@@ -74,7 +74,7 @@ class AdminTestimonialController extends Controller
         $Delete_Testimonial = Testimonial::Where('id',$id)->first();
         unlink(resource_path('uploads/Testimonial/').$Delete_Testimonial->photo);
         $Delete_Testimonial->delete();
-        return redirect()->back()->with(['Success','Suppression effecuée avec success']);
+        return redirect()->back()->with('success','Suppression effecuée avec success');
 
     }
 }

@@ -33,7 +33,7 @@ class AdminFeatureController extends Controller
             $Feature->text = $request->description;
             $Feature->save();
 
-        return redirect()->back()->with('Success','Enregistrement Effectuée avec sucess');
+        return redirect()->back()->with('success','Enregistrement Effectuée avec success');
     }
 
     public function Admin_Feature_Edit($id)
@@ -56,14 +56,14 @@ class AdminFeatureController extends Controller
             $Feature_Update->heading = $request->titre;
             $Feature_Update->text = $request->description;
             $Feature_Update->Update();
-            return redirect()->back()->with(['Success','Mise a jour effecuée avec success']);
+            return redirect()->back()->with(['success','Modification effecuée avec success']);
     }
 
     public function Admin_Feature_Delete($id)
     {
         $Delete_Feature = Feature::Where('id',$id)->first();
         $Delete_Feature->delete();
-        return redirect()->back()->with(['Success','Suppression effecuée avec success']);
+        return redirect()->back()->with(['success','Suppression effecuée avec success']);
 
     }
 }
