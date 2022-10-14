@@ -46,10 +46,10 @@
                             <a href="javascript:void;" class="nav-link dropdown-toggle">Gallery</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="photo-gallery.html" class="nav-link">Photo Gallery</a>
+                                    <a href="{{Route('Photo_Home')}}" class="nav-link">Gallerie Photo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="video-gallery.html" class="nav-link">Video Gallery</a>
+                                    <a href="video-gallery.html" class="nav-link">Gallerie Video </a>
                                 </li>
                             </ul>
                         </li>

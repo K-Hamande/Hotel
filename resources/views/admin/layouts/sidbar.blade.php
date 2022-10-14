@@ -28,6 +28,8 @@
 
             <li class=""><a class="nav-link" href="{{Route('Admin_Post')}} "><i class="fas fa-hand-point-right"></i> <span>Post</span></a></li>
 
+            <li class=""><a class="nav-link" href="{{Route('Admin_Photo')}} "><i class="fas fa-hand-point-right"></i> <span>Galeries Photo</span></a></li>
+
         </ul>
     </aside>
 </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminFormController;
+use App\Http\Controllers\Admin\AdminPhotoController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminSlideController;
@@ -21,6 +22,8 @@ Route::get('/About',[AboutController::class,'Index'])->name('About');
 Route::get('/Blog_Home',[AdminPostController::class,'Blog_Home'])->name('Blog_Home');
 
 Route::get('/Post/{id}',[AdminPostController::class,'Post'])->name('Post');
+
+Route::get('/Photo_Home/',[AdminPhotoController::class,'Photo_Home'])->name('Photo_Home');
 
 
 /*  Admin */ 
@@ -101,6 +104,21 @@ Route::get('/Post/{id}',[AdminPostController::class,'Post'])->name('Post');
     Route::get('/admin/Admin_Post_Edit/{id}',[AdminPostController::class,'Admin_Post_Edit'])->name('Admin_Post_Edit');
 
     Route::get('/admin/Admin_Post_Delete/{id}',[AdminPostController::class,'Admin_Post_Delete'])->name('Admin_Post_Delete');
+   
+
+                                    // Admin Galeries Photo Route
+
+    Route::get('/admin/Admin_Photo',[AdminPhotoController::class,'Index'])->name('Admin_Photo');
+
+    Route::get('/admin/Admin_Photo_Add',[AdminPhotoController::class,'Admin_Photo_Add'])->name('Admin_Photo_Add');
+
+    Route::post('/admin/Admin_Photo_Store',[AdminPhotoController::class,'Store'])->name('Admin_Photo_Store');
+
+    Route::post('/admin/Admin_Photo_Update/{id}',[AdminPhotoController::class,'Admin_Photo_Update'])->name('Admin_Photo_Update');
+
+    Route::get('/admin/Admin_Photo_Edit/{id}',[AdminPhotoController::class,'Admin_Photo_Edit'])->name('Admin_Photo_Edit');
+
+    Route::get('/admin/Admin_Photo_Delete/{id}',[AdminPhotoController::class,'Admin_Photo_Delete'])->name('Admin_Photo_Delete');
    
 });
 
