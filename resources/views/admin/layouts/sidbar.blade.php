@@ -30,6 +30,8 @@
 
             <li class=""><a class="nav-link" href="{{Route('Admin_Photo')}} "><i class="fas fa-hand-point-right"></i> <span>Galeries Photo</span></a></li>
 
+            <li class=""><a class="nav-link" href="{{Route('Admin_FAQ')}} "><i class="fas fa-hand-point-right"></i> <span>FAQ</span></a></li>
+
         </ul>
     </aside>
 </div>

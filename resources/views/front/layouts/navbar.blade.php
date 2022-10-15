@@ -43,15 +43,9 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="javascript:void;" class="nav-link dropdown-toggle">Gallery</a>
-                            <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="{{Route('Photo_Home')}}" class="nav-link">Gallerie Photo</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="video-gallery.html" class="nav-link">Gallerie Video </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="{{Route('Blog_Home')}}" class="nav-link">Blog</a>

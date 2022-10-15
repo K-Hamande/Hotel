@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminFAQController;
 use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminFormController;
 use App\Http\Controllers\Admin\AdminPhotoController;
@@ -104,7 +105,6 @@ Route::get('/Photo_Home/',[AdminPhotoController::class,'Photo_Home'])->name('Pho
     Route::get('/admin/Admin_Post_Edit/{id}',[AdminPostController::class,'Admin_Post_Edit'])->name('Admin_Post_Edit');
 
     Route::get('/admin/Admin_Post_Delete/{id}',[AdminPostController::class,'Admin_Post_Delete'])->name('Admin_Post_Delete');
-   
 
                                     // Admin Galeries Photo Route
 
@@ -119,6 +119,21 @@ Route::get('/Photo_Home/',[AdminPhotoController::class,'Photo_Home'])->name('Pho
     Route::get('/admin/Admin_Photo_Edit/{id}',[AdminPhotoController::class,'Admin_Photo_Edit'])->name('Admin_Photo_Edit');
 
     Route::get('/admin/Admin_Photo_Delete/{id}',[AdminPhotoController::class,'Admin_Photo_Delete'])->name('Admin_Photo_Delete');
+
+
+            // Admin FAQ Photo Route
+
+            Route::get('/admin/Admin_FAQ',[AdminFAQController::class,'Index'])->name('Admin_FAQ');
+
+            Route::get('/admin/Admin_FAQ_Add',[AdminFAQController::class,'Admin_FAQ_Add'])->name('Admin_FAQ_Add');
+        
+            Route::post('/admin/Admin_FAQ_Store',[AdminFAQController::class,'Store'])->name('Admin_FAQ_Store');
+        
+            Route::post('/admin/Admin_FAQ_Update/{id}',[AdminFAQController::class,'Admin_FAQ_Update'])->name('Admin_FAQ_Update');
+        
+            Route::get('/admin/Admin_FAQ_Edit/{id}',[AdminFAQController::class,'Admin_FAQ_Edit'])->name('Admin_FAQ_Edit');
+        
+            Route::get('/admin/Admin_FAQ_Delete/{id}',[AdminFAQController::class,'Admin_FAQ_Delete'])->name('Admin_FAQ_Delete');
    
 });
 
