@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('heading','Foire Aux Question ')
+@section('heading','Foire Aux Questions ')
 
 @section('main_content')
 
@@ -21,7 +21,7 @@
                                 <tr>
                                     <th>Numéro</th>
                                     <th>Question</th>
-                                    <th>Reponse</th>
+                                    {{-- <th>Reponse</th> --}}
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -31,15 +31,15 @@
                                 <td> {{$loop->iteration}} </td>
                                 
                                 <td>
-                                    {{ $Values->queation}}
+                                    {{ $Values->question}}
                                 </td>
                                 
-                                <td>
-                                    {{  Str::limit($Values->question,50)}}
-                                </td>
+                                {{-- <td>
+                                    {{  Str::limit($Values->reponse,50)}}
+                                </td> --}}
                                 <td class="pt_10 pb_10">
-                                    <a href=" {{Route('Admin_Testimonial_Edit',['id'=>$Values->id])}}" class="btn btn-primary " >Editer</a>
-                                    <a href="{{Route('Admin_Testimonial_Delete',['id'=>$Values->id])}}" class="btn btn-danger" onClick="return confirm('Voulez vous Supprimer ?');">Supprimer</a>
+                                    <a href=" {{Route('Admin_FAQ_Edit',['id'=>$Values->id])}}" class="btn btn-primary " >Editer</a>
+                                    <a href="{{Route('Admin_FAQ_Delete',['id'=>$Values->id])}}" class="btn btn-danger" onClick="return confirm('Voulez vous Supprimer ?');">Supprimer</a>
                                 </td>
                             </tr>
                                    

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminAboutController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFAQController;
 use App\Http\Controllers\Admin\AdminFeatureController;
@@ -25,6 +26,8 @@ Route::get('/Blog_Home',[AdminPostController::class,'Blog_Home'])->name('Blog_Ho
 Route::get('/Post/{id}',[AdminPostController::class,'Post'])->name('Post');
 
 Route::get('/Photo_Home/',[AdminPhotoController::class,'Photo_Home'])->name('Photo_Home');
+
+Route::get('/FAQ_Home/',[AdminFAQController::class,'FAQ_Home'])->name('FAQ_Home');
 
 
 /*  Admin */ 
@@ -121,19 +124,34 @@ Route::get('/Photo_Home/',[AdminPhotoController::class,'Photo_Home'])->name('Pho
     Route::get('/admin/Admin_Photo_Delete/{id}',[AdminPhotoController::class,'Admin_Photo_Delete'])->name('Admin_Photo_Delete');
 
 
-            // Admin FAQ Photo Route
+                             // Admin FAQ Photo Route
 
-            Route::get('/admin/Admin_FAQ',[AdminFAQController::class,'Index'])->name('Admin_FAQ');
+    Route::get('/admin/Admin_FAQ',[AdminFAQController::class,'Index'])->name('Admin_FAQ');
 
-            Route::get('/admin/Admin_FAQ_Add',[AdminFAQController::class,'Admin_FAQ_Add'])->name('Admin_FAQ_Add');
+    Route::get('/admin/Admin_FAQ_Add',[AdminFAQController::class,'Admin_FAQ_Add'])->name('Admin_FAQ_Add');
         
-            Route::post('/admin/Admin_FAQ_Store',[AdminFAQController::class,'Store'])->name('Admin_FAQ_Store');
+    Route::post('/admin/Admin_FAQ_Store',[AdminFAQController::class,'Store'])->name('Admin_FAQ_Store');
         
-            Route::post('/admin/Admin_FAQ_Update/{id}',[AdminFAQController::class,'Admin_FAQ_Update'])->name('Admin_FAQ_Update');
+    Route::post('/admin/Admin_FAQ_Update/{id}',[AdminFAQController::class,'Admin_FAQ_Update'])->name('Admin_FAQ_Update');
         
-            Route::get('/admin/Admin_FAQ_Edit/{id}',[AdminFAQController::class,'Admin_FAQ_Edit'])->name('Admin_FAQ_Edit');
+    Route::get('/admin/Admin_FAQ_Edit/{id}',[AdminFAQController::class,'Admin_FAQ_Edit'])->name('Admin_FAQ_Edit');
         
-            Route::get('/admin/Admin_FAQ_Delete/{id}',[AdminFAQController::class,'Admin_FAQ_Delete'])->name('Admin_FAQ_Delete');
+     Route::get('/admin/Admin_FAQ_Delete/{id}',[AdminFAQController::class,'Admin_FAQ_Delete'])->name('Admin_FAQ_Delete');
+
+
+                             // Admin About Photo Route
+
+    Route::get('/admin/Admin_About',[AdminAboutController::class,'Index'])->name('Admin_About');
+
+    Route::get('/admin/Admin_About_Add',[AdminAboutController::class,'Admin_About_Add'])->name('Admin_About_Add');
+        
+    Route::post('/admin/Admin_About_Store',[AdminAboutController::class,'Store'])->name('Admin_About_Store');
+        
+    Route::post('/admin/Admin_About_Update/{id}',[AdminAboutController::class,'Admin_About_Update'])->name('Admin_About_Update');
+        
+    Route::get('/admin/Admin_About_Edit/{id}',[AdminAboutController::class,'Admin_About_Edit'])->name('Admin_About_Edit');
+        
+     Route::get('/admin/Admin_About_Delete/{id}',[AdminAboutController::class,'Admin_About_Delete'])->name('Admin_About_Delete');
    
 });
 

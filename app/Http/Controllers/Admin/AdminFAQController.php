@@ -65,9 +65,9 @@ class AdminFAQController extends Controller
 
     }
 
-    // public function Photo_Home()
-    // {
-    //     $Photo_Display = faq::get();
-    //     return view('front.photo_gallerie',compact('Photo_Display'));
-    // }
+     public function FAQ_Home()
+     {
+         $FAQ_Display = faq::get();
+         return view('front.faq',compact('FAQ_Display'));
+     }
 }
