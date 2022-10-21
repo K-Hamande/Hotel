@@ -19,9 +19,13 @@
                         <li class="nav-item">
                             <a href="{{Route('Home')}}" class="nav-link">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{Route('About')}}" class="nav-link">A Propos</a>
-                        </li>
+
+                        @if($About_Display->statu_About == 1 )
+                            <li class="nav-item">
+                                <a href="{{Route('About_Home')}}" class="nav-link"> {{ $About_Display->titre }}  </a>
+                            </li>
+                        @endif
+                        
                         <li class="nav-item">
                             <a href="javascript:void;" class="nav-link dropdown-toggle">Room & Suite</a>
                             <ul class="dropdown-menu">

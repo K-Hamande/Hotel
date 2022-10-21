@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2> {{  $About_Display->titre }} </h2>
+                <h2> {{  $Politique_Display->titre}} </h2>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
             <div class="col-md-12">
                 
                 <p>
-                    {!! $About_Display->contenu !!}
+                    {!! $Politique_Display->contenu !!}
                 </p>
             </div>
         </div>

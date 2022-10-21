@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFAQController;
 use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminFormController;
+use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\Admin\AdminPhotoController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminProfileController;
@@ -28,6 +29,10 @@ Route::get('/Post/{id}',[AdminPostController::class,'Post'])->name('Post');
 Route::get('/Photo_Home/',[AdminPhotoController::class,'Photo_Home'])->name('Photo_Home');
 
 Route::get('/FAQ_Home/',[AdminFAQController::class,'FAQ_Home'])->name('FAQ_Home');
+
+Route::get('/About_Home/',[AdminPagesController::class,'About_Home'])->name('About_Home');
+
+Route::get('/Terme_Home/',[AdminPagesController::class,'Terme_Home'])->name('Terme_Home');
 
 
 /*  Admin */ 
@@ -124,7 +129,7 @@ Route::get('/FAQ_Home/',[AdminFAQController::class,'FAQ_Home'])->name('FAQ_Home'
     Route::get('/admin/Admin_Photo_Delete/{id}',[AdminPhotoController::class,'Admin_Photo_Delete'])->name('Admin_Photo_Delete');
 
 
-                             // Admin FAQ Photo Route
+                             // Admin FAQ  Route
 
     Route::get('/admin/Admin_FAQ',[AdminFAQController::class,'Index'])->name('Admin_FAQ');
 
@@ -139,19 +144,34 @@ Route::get('/FAQ_Home/',[AdminFAQController::class,'FAQ_Home'])->name('FAQ_Home'
      Route::get('/admin/Admin_FAQ_Delete/{id}',[AdminFAQController::class,'Admin_FAQ_Delete'])->name('Admin_FAQ_Delete');
 
 
-                             // Admin About Photo Route
+                             // Admin Pages Route / A propos
 
-    Route::get('/admin/Admin_About',[AdminAboutController::class,'Index'])->name('Admin_About');
+    Route::get('/admin/Admin_About',[AdminPagesController::class,'Index'])->name('Admin_About');
 
-    Route::get('/admin/Admin_About_Add',[AdminAboutController::class,'Admin_About_Add'])->name('Admin_About_Add');
+    Route::get('/admin/Admin_About_Add',[AdminPagesController::class,'Admin_About_Add'])->name('Admin_About_Add');
         
-    Route::post('/admin/Admin_About_Store',[AdminAboutController::class,'Store'])->name('Admin_About_Store');
+    Route::post('/admin/Admin_About_Store',[AdminPagesController::class,'Store'])->name('Admin_About_Store');
         
-    Route::post('/admin/Admin_About_Update/{id}',[AdminAboutController::class,'Admin_About_Update'])->name('Admin_About_Update');
+    Route::post('/admin/Admin_About_Update/{id}',[AdminPagesController::class,'Admin_About_Update'])->name('Admin_About_Update');
         
-    Route::get('/admin/Admin_About_Edit/{id}',[AdminAboutController::class,'Admin_About_Edit'])->name('Admin_About_Edit');
+    Route::get('/admin/Admin_About_Edit/{id}',[AdminPagesController::class,'Admin_About_Edit'])->name('Admin_About_Edit');
         
-     Route::get('/admin/Admin_About_Delete/{id}',[AdminAboutController::class,'Admin_About_Delete'])->name('Admin_About_Delete');
+     Route::get('/admin/Admin_About_Delete/{id}',[AdminPagesController::class,'Admin_About_Delete'])->name('Admin_About_Delete');
+
+
+                             // Admin Pages Route / Terme et condition
+
+    Route::get('/admin/Admin_Terme',[AdminPagesController::class,'Index_Terme'])->name('Admin_Terme');
+
+    Route::get('/admin/Admin_Terme_Add',[AdminPagesController::class,'Admin_Terme_Add'])->name('Admin_Terme_Add');
+        
+    Route::post('/admin/Admin_Terme_Store',[AdminPagesController::class,'Store_Terme'])->name('Admin_Terme_Store');
+        
+    Route::post('/admin/Admin_Terme_Update/{id}',[AdminPagesController::class,'Admin_Terme_Update'])->name('Admin_Terme_Update');
+        
+    Route::get('/admin/Admin_Terme_Edit/{id}',[AdminPagesController::class,'Admin_Terme_Edit'])->name('Admin_Terme_Edit');
+        
+     Route::get('/admin/Admin_Terme_Delete/{id}',[AdminPagesController::class,'Admin_Terme_Delete'])->name('Admin_Terme_Delete');
    
 });
 
