@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="item">
-                    <h2 class="heading">Site Links</h2>
+                    <h2 class="heading">Liens du Site </h2>
                     <ul class="useful-links">
                         <li><a href="rooms.html">Rooms & Suites</a></li>
                         <li><a href=" {{Route('Photo_Home')}} ">Gallerie Photo</a></li>
@@ -14,15 +14,22 @@
             </div>
             <div class="col-md-3">
                 <div class="item">
-                    <h2 class="heading">Useful Links</h2>
+                    <h2 class="heading">Liens Usuel </h2>
                     <ul class="useful-links">
                         <li><a href="{{Route('Home')}}">Home</a></li>
                         @if ($Terme_Display->status_terme == 1 )
 
-                            <li><a href="{{Route('Terme_Home')}}">Termes et Conditions</a></li>
+                            <li><a href="{{Route('Terme_Home')}}"> {{ $Terme_Display->titre_terme }} </a></li>
                             
                         @endif
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+
+                       
+
+                        @if($Politique_Display->status_politique == 1 )
+
+                            <li><a href="{{Route('Politique_Home')}}">  {{ $Politique_Display->titre_politique}}</a></li>
+                            
+                        @endif
                         <li><a href="disclaimer.html">Disclaimer</a></li>
                         <li><a href="{{ Route('FAQ_Home') }}">FAQ</a></li>
                     </ul>

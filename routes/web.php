@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminFormController;
 use App\Http\Controllers\Admin\AdminPagesController;
 use App\Http\Controllers\Admin\AdminPhotoController;
+use App\Http\Controllers\Admin\AdminPolitiqueController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminSlideController;
@@ -33,6 +34,8 @@ Route::get('/FAQ_Home/',[AdminFAQController::class,'FAQ_Home'])->name('FAQ_Home'
 Route::get('/About_Home/',[AdminPagesController::class,'About_Home'])->name('About_Home');
 
 Route::get('/Terme_Home/',[AdminPagesController::class,'Terme_Home'])->name('Terme_Home');
+
+Route::get('/Politique_Home/',[AdminPolitiqueController::class,'Politique_Home'])->name('Politique_Home');
 
 
 /*  Admin */ 
@@ -172,6 +175,21 @@ Route::get('/Terme_Home/',[AdminPagesController::class,'Terme_Home'])->name('Ter
     Route::get('/admin/Admin_Terme_Edit/{id}',[AdminPagesController::class,'Admin_Terme_Edit'])->name('Admin_Terme_Edit');
         
      Route::get('/admin/Admin_Terme_Delete/{id}',[AdminPagesController::class,'Admin_Terme_Delete'])->name('Admin_Terme_Delete');
+   
+
+                             // Route Admin Pages Politique et confidentialité
+
+    Route::get('/admin/Admin_Politique',[AdminPolitiqueController::class,'Index'])->name('Admin_Politique');
+
+    Route::get('/admin/Admin_Politique_Add',[AdminPolitiqueController::class,'Admin_Politique_Add'])->name('Admin_Politique_Add');
+        
+    Route::post('/admin/Admin_Politique_Store',[AdminPolitiqueController::class,'Store'])->name('Admin_Politique_Store');
+        
+    Route::post('/admin/Admin_Politique_Update/{id}',[AdminPolitiqueController::class,'Admin_Politique_Update'])->name('Admin_Politique_Update');
+        
+    Route::get('/admin/Admin_Politique_Edit/{id}',[AdminPolitiqueController::class,'Admin_Politique_Edit'])->name('Admin_Politique_Edit');
+        
+     Route::get('/admin/Admin_Politique_Delete/{id}',[AdminPolitiqueController::class,'Admin_Politique_Delete'])->name('Admin_Politique_Delete');
    
 });
 

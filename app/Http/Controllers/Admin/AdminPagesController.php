@@ -115,7 +115,7 @@ class AdminPagesController extends Controller
     public function Admin_Terme_Edit($id)
     {
         $Terme_Data = Terme::Where('id',$id)->first();
-        return view('admin.Terme_edit',compact('Terme_Data'));
+        return view('admin.terme_edit',compact('Terme_Data'));
 
     }
 

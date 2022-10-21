@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('politiques', function (Blueprint $table) {
             $table->id();
+            $table->text('titre_politique');
+            $table->text('contenu_politique');
+            $table->integer('status_politique');
             $table->timestamps();
         });
     }

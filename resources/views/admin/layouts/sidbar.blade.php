@@ -16,6 +16,7 @@
                 <ul class="dropdown-menu">
                     <li class="active"><a class="nav-link" href="{{Route('Admin_About')}}"><i class="fas fa-angle-right"></i> About </a></li>
                     <li class="active"><a class="nav-link" href="{{Route('Admin_Terme')}}"><i class="fas fa-angle-right"></i> Terme </a></li>
+                    <li class="active"><a class="nav-link" href="{{Route('Admin_Politique')}}"><i class="fas fa-angle-right"></i> Politique </a></li>
                     <li class=""><a class="nav-link" href=""><i class="fas fa-angle-right"></i>Contact </a></li>
                 </ul> 
             </li>

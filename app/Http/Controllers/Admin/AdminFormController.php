@@ -9,7 +9,6 @@ class AdminFormController extends Controller
 {
     public function Index()
     {
-        $Button = True;
         return view('admin.form',compact('Button'));
     }
 }
